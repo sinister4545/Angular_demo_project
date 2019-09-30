@@ -1,0 +1,18 @@
+<h2 [ngClass]="{
+    'green': h1Style,
+    'large': !h1Style
+}">Home</h2>
+<h2 [style.color]="h1Style ? 'red': 'pink' ">hello</h2>
+<h3 [ngStyle]="{
+    'color': h1Style ? 'orange' : 'blue',
+    'font-size': h1Style ? '5em' : '2em'
+}"> for testing</h3>
+<button (click)="firstClick()">click me</button>
+
+<ul *ngIf=users>
+    <li *ngFor="let user of users.data">
+        <img [src]="user.avatar">
+        <p> {{ user.first_name }}  {{ user.last_name }} </p>
+    </li>
+</ul>
+
